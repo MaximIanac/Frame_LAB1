@@ -40,7 +40,7 @@ class MainController extends Controller
     
         TasksModel::create($request->all());
     
-        return redirect()->route('home')->with('success', 'Задача успешно создана.');
+        return redirect()->route('home');
     }
 
     /**

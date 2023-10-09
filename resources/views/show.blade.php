@@ -16,18 +16,20 @@
 
 
         <div class="mt-4">
-            <a href="{{ route("index.edit", $task->id)}}" class="py-2 px-4 bg-blue-500 rounded text-white">Edit</a>
+            <a href="{{ route("index.edit", $task->id)}}" class="cursor-pointer py-2 px-4 bg-blue-500 rounded text-white">Edit</a>
         </div>
         <div class="mt-4">
             <form method="POST" action="{{ route("index.destroy", $task->id) }}">
                 @csrf
                 @method('DELETE')
-                <button type="submit" class="py-2 px-4 bg-red-500 rounded text-white">Delete</button>
+                <button type="submit" class="cursor-pointer py-2 px-4 bg-red-500 rounded text-white">Delete</button>
             </form>
         </div>
         
-        <div class="mt-20 text-2xl">
-            <a href="{{ route("home")}}">Назад</a>
-        </div>
+        <a href="{{ route("home")}}">
+            <div class="text-center w-36 bg-gray-300 rounded-md text-white py-3 font-medium hover:bg-gray-500">
+                Назад
+            </div>
+        </a>
     </div>
 </div>
